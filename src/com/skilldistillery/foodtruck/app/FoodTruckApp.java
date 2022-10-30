@@ -87,17 +87,17 @@ public class FoodTruckApp {
 	public void mainMenu() {
 
 		int sum = 0;
-		int i = 0;
 		double average = 0.0;
-		for (i = 0; i < totalTrucks.length; i++) {
+		for (int i = 0; i < totalTrucks.length; i++) {
 			if(totalTrucks[i] != null) {
 				sum += totalTrucks[i].getRating();
+			} else {
 				break;
 			}
+			average = sum / (i + 1);
 		}
-		
-		average = sum / (i + 1);
-		
+
+				
 		int highest = totalTrucks[0].getRating();
 		for (int k = 0; k < totalTrucks.length; k++) {
 			if(totalTrucks[k] != null) {
@@ -139,7 +139,6 @@ public class FoodTruckApp {
 				System.out.println("Goodbye.");
 				break;
 			} else {
-				
 				continue;
 			}
 		}
