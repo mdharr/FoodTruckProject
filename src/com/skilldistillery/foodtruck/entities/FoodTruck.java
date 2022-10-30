@@ -22,11 +22,11 @@ public class FoodTruck {
 		this.rating = rating;
 	}
 
-	public static int getNextTruckId() {
+	public int getNextTruckId() {
 		return nextTruckId;
 	}
 
-	public static void setNextTruckId(int nextTruckId) {
+	public void setNextTruckId(int nextTruckId) {
 		FoodTruck.nextTruckId = nextTruckId;
 	}
 
@@ -64,7 +64,6 @@ public class FoodTruck {
 	
 	@Override
 	public String toString() {
-//		return "FoodTruck [name=" + name + ", type=" + type + ", id=" + id + ", rating=" + rating + "]";
 		StringBuilder output = new StringBuilder(5);
 		output.append("name= ").append(name).append(", type= ").append(type).append(", id= ").append(id).append(", rating= ").append(rating);
 		return output.toString();
